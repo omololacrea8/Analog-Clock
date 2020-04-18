@@ -5,7 +5,7 @@ let clockAn = document.getElementsByClassName('clock')[0];
 //one full circle is 360 deg
 for (var i = 1; i < 60; i++) {
   clockAn.innerHTML += "<div class='analog'></div>";
-  analog[i].style.transform = "rotate(" + 6 * i + "deg)";
+  analog[i].style.transform = "rotate(" + 6 * i + "deg)"; //  // we got 6 because 360/60 = 6
 }
 
 function clock() {
