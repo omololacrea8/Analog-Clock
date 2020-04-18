@@ -1,5 +1,10 @@
+body{
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    animation: gradient 3s ease infinite;
+    background-size: 400% 400%;
+}
 .clock {
-    background: #ececec;
+    background: white;
     width: 300px;
     height: 300px;
     margin: 8% auto 0;
@@ -9,11 +14,13 @@
     box-shadow: 0 2vw 4vw -1vw rgba(0,0,0,0.8);
   }
   
-  .dot {
+  .mark {
     width: 14px;
     height: 14px;
     border-radius: 50%;
-    background: #ccc;
+    background:  linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    animation: gradient 3s ease infinite;
+    background-size: 400% 400%;;
     top: 0;
     left: 0;
     right: 0;
@@ -24,7 +31,7 @@
     box-shadow: 0 2px 4px -1px black;
   }
   
-  .hour-hand {
+  .hour-tick {
     position: absolute;
     z-index: 5;
     width: 4px;
@@ -38,7 +45,7 @@
     border-top-right-radius: 50%;
   }
   
-  .minute-hand {
+  .minute-tick {
     position: absolute;
     z-index: 6;
     width: 4px;
@@ -52,7 +59,7 @@
     transform-origin: 50% 105px;
   }
   
-  .second-hand {
+  .second-tick {
     position: absolute;
     z-index: 7;
     width: 2px;
@@ -76,26 +83,26 @@
     z-index: 4;
   }
   
-  .h12 {
+  .span4 {
     top: 30px;
     left: 50%;
     margin-left: -9px;
   }
-  .h3 {
+  .span1 {
     top: 140px;
     right: 30px;
   }
-  .h6 {
+  .span2 {
     bottom: 30px;
     left: 50%;
     margin-left: -5px;
   }
-  .h9 {
+  .span3 {
     left: 32px;
     top: 140px;
   }
   
-  .diallines {
+  .analog {
     position: absolute;
     z-index: 2;
     width: 2px;
@@ -105,7 +112,7 @@
     margin-left: -1px;
     transform-origin: 50% 150px;
   }
-  .diallines:nth-of-type(5n) {
+  .analog:nth-of-type(5n) {
     position: absolute;
     z-index: 2;
     width: 4px;
@@ -116,7 +123,7 @@
     transform-origin: 50% 150px;
   }
   
-  .info {
+  .about {
     position: absolute;
     width: 120px;
     height: 20px;
@@ -136,9 +143,33 @@
     margin-left: -60px;
     left: 50%;
   }
-  .date {
+  .dateclock {
       top: 80px;
     }
-  .day {
+  .dayclock {
       top: 200px;
   }
+  
+/* Default Style */
+.graph {
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    
+  }
+  .graph a {
+    color: crimson;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  @keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
